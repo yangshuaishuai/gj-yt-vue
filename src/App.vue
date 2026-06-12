@@ -3,7 +3,7 @@
     <el-container>
       <el-aside width="200px">
         <div class="logo">
-          <h2>后台管理</h2>
+          <h2>个金一体化</h2>
         </div>
         <el-menu
           :default-active="$route.path"
@@ -17,19 +17,23 @@
             <span slot="title">首页</span>
           </el-menu-item>
           <el-menu-item index="/table">
-            <i class="el-icon-s-grid"></i>
-            <span slot="title">表格</span>
+            <i class="el-icon-s-custom"></i>
+            <span slot="title">客户管理</span>
           </el-menu-item>
           <el-menu-item index="/form">
-            <i class="el-icon-edit"></i>
-            <span slot="title">表单</span>
+            <i class="el-icon-s-cooperation"></i>
+            <span slot="title">走访人员</span>
+          </el-menu-item>
+          <el-menu-item index="/report">
+            <i class="el-icon-s-data"></i>
+            <span slot="title">走访报表</span>
           </el-menu-item>
         </el-menu>
       </el-aside>
       <el-container>
         <el-header>
           <div class="header-content">
-            <span class="title">Vue2 + Element UI Demo</span>
+            <span class="title">个金一体化营销工具</span>
             <el-dropdown>
               <span class="el-dropdown-link">
                 管理员<i class="el-icon-arrow-down el-icon--right"></i>

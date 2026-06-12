@@ -106,4 +106,25 @@ export const gridMemberApi = {
   batchDelete: (ids) => request.delete('/grid-member/batch', { data: ids })
 }
 
+
+// ========== 点击日志 ==========
+export const clickLogApi = {
+  list: () => request.get('/click-log/list'),
+  create: (data) => request.post('/click-log', data),
+  batchCreate: (data) => request.post('/click-log/batch', data)
+}
+
+
+// ========== 客户走访报表 ==========
+export const customerVisitReportApi = {
+  list: (params) => request.get('/report/customer-visit/list', { params }),
+  exportUrl: (params) => {
+    const query = Object.entries(params || {})
+      .filter(([, v]) => v !== '' && v !== null && v !== undefined)
+      .map(([k, v]) => k + '=' + encodeURIComponent(v))
+      .join('&')
+    return '/api/report/customer-visit/export' + (query ? '?' + query : '')
+  }
+}
+
 export default request
